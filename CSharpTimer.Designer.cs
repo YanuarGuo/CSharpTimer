@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "CSharpTimer";
+            LblTimer = new Label();
+            SuspendLayout();
+            // 
+            // LblTimer
+            // 
+            LblTimer.AutoSize = true;
+            LblTimer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LblTimer.Location = new Point(136, 45);
+            LblTimer.Name = "LblTimer";
+            LblTimer.Size = new Size(54, 21);
+            LblTimer.TabIndex = 0;
+            LblTimer.Text = "Timer";
+            // 
+            // CSharpTimer
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(364, 117);
+            Controls.Add(LblTimer);
+            Name = "CSharpTimer";
+            Text = "CSharpTimer";
+            Load += CSharpTimer_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label LblTimer;
     }
 }
